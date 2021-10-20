@@ -3,13 +3,13 @@ javax.faces.source: mainForm:j_id_r
 javax.faces.partial.execute: mainForm
 javax.faces.partial.render: mainForm:error mainForm:forResetPwd
 mainForm:j_id_r: mainForm:j_id_r
-mainForm:forResetPwd: 0619271X
+mainForm:forResetPwd: XXXXXXXX(密码)
 userName: 
 userPwd: 
 userDynamicPwd: 
 userDynamicPwdd: 
 serviceType: 
-mainForm:userNameLogin: 3119000084
+mainForm:userNameLogin: 311900xxxx(学号)
 mainForm:serviceSuffixLogin: 
 mainForm:passwordLogin: MDYxOTI3MVg=
 mainForm:userDynamicPwd: 
