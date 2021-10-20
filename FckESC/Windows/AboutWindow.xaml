@@ -1,0 +1,122 @@
+﻿<Window x:Class="FckESC.Windows.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        FontSize="16"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        Title="关于"
+        Height="450"
+        Width="550"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <ScrollViewer x:Name="MainListView">
+            <StackPanel>
+                <GroupBox Header="天邑登录"
+                          Style="{DynamicResource MaterialDesignCardGroupBox}"
+                          Margin="16">
+                    <GroupBox.HeaderTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Height="32"
+                                       Width="32"
+                                       Source="/Resource/FckESC.png"
+                                       VerticalAlignment="Center" />
+                                <TextBlock Margin="8,0,0,0"
+                                           VerticalAlignment="Center"
+                                           Style="{StaticResource MaterialDesignSubtitle1TextBlock}"
+                                           Text="{Binding}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </GroupBox.HeaderTemplate>
+                    <TextBlock Text="此程序用于五邑大学校园网登录，理论上也支持其他使用天翼校园的学校，具体需要自行测试。"
+                               TextWrapping="Wrap" />
+                </GroupBox>
+                <GroupBox Header="使用方法"
+                          Style="{DynamicResource MaterialDesignCardGroupBox}"
+                          Margin="16,0">
+                    <GroupBox.HeaderTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Help"
+                                                         Height="32"
+                                                         Width="32"
+                                                         VerticalAlignment="Center" />
+                                <TextBlock Margin="8,0,0,0"
+                                           VerticalAlignment="Center"
+                                           Style="{StaticResource MaterialDesignSubtitle1TextBlock}"
+                                           Text="{Binding}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </GroupBox.HeaderTemplate>
+                    <TextBlock Text="输入账号和密码（以五邑大学为例，账号为学号，密码默认为身份证后8位），点击登录即可。登录成功后可以关闭程序。"
+                               TextWrapping="Wrap" />
+                </GroupBox>
+                <GroupBox Header="声明"
+                          Style="{DynamicResource MaterialDesignCardGroupBox}"
+                          Margin="16">
+                    <GroupBox.HeaderTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="AlertBoxOutline"
+                                                         Height="32"
+                                                         Width="32"
+                                                         VerticalAlignment="Center" />
+                                <TextBlock Margin="8,0,0,0"
+                                           VerticalAlignment="Center"
+                                           Style="{StaticResource MaterialDesignSubtitle1TextBlock}"
+                                           Text="{Binding}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </GroupBox.HeaderTemplate>
+                    <TextBlock Text="本程序不会收集任何用户相关的隐私数据，有能力的同学可以自行抓包或者逆向本程序，保证不包含任何恶意代码。"
+                               TextWrapping="Wrap" />
+                </GroupBox>
+                <GroupBox Header="联系"
+                          Style="{DynamicResource MaterialDesignCardGroupBox}"
+                          Margin="16,0,16,16">
+                    <GroupBox.HeaderTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="ChatProcessingOutline"
+                                                         Height="32"
+                                                         Width="32"
+                                                         VerticalAlignment="Center" />
+                                <TextBlock Margin="8,0,0,0"
+                                           VerticalAlignment="Center"
+                                           Style="{StaticResource MaterialDesignSubtitle1TextBlock}"
+                                           Text="{Binding}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </GroupBox.HeaderTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="Button_QQ"
+                                Click="Button_QQ_Click"
+                                Margin="8">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Qqchat"
+                                                         Margin="0,0,4,0" />
+                                <TextBlock Text="QQ交流群：639824978" />
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="Button_Email"
+                                Click="Button_Email_Click"
+                                Margin="8">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Email"
+                                                         Margin="0,0,4,0" />
+                                <TextBlock Text="E-Mail：admin@jzen.tech" />
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+        </ScrollViewer>
+        <materialDesign:Snackbar x:Name="SnackbarTips"
+                                 MessageQueue="{materialDesign:MessageQueue}" />
+    </Grid>
+</Window>

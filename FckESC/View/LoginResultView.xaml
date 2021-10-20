@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="FckESC.View.LoginResultView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d"
+             d:DesignHeight="250"
+             d:DesignWidth="400">
+    <Grid>
+        <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect ExpandIn, Duration=0:0:1}">
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+                <materialDesign:PackIcon Height="64"
+                                         Width="64"
+                                         HorizontalAlignment="Center"
+                                         Foreground="{DynamicResource PrimaryHueMidBrush}"
+                                         Kind="CloudDone" />
+                <TextBlock x:Name="Text_Result"
+                           HorizontalAlignment="Center"
+                           Text="登录信息"
+                           Margin="0 16 0 16" />
+                <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect FadeIn, Duration=0:0:1}">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="返回"
+                                Command="{x:Static materialDesign:Transitioner.MoveFirstCommand}"
+                                Margin="0,0,16,0" />
+                        <Button x:Name="Button_Exit" Content="退出 " Click="Button_Exit_Click"/>
+                    </StackPanel>
+                </materialDesign:TransitioningContent>
+            </StackPanel>
+        </materialDesign:TransitioningContent>
+    </Grid>
+</UserControl>

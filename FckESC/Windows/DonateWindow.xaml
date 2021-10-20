@@ -1,0 +1,27 @@
+﻿<Window x:Class="FckESC.Windows.DonateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        FontSize="16"
+        ResizeMode="CanMinimize"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        Title="打赏"
+        Height="425"
+        Width="500"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <materialDesign:Card Margin="8">
+            <StackPanel>
+                <Image Source="/Resource/donateCode.jpg" />
+                <Separator Style="{StaticResource MaterialDesignDarkSeparator}" />
+                <TextBlock Text="您的打赏是对我最大的支持，非常感谢。"
+                           HorizontalAlignment="Center" />
+            </StackPanel>
+        </materialDesign:Card>
+    </Grid>
+</Window>
