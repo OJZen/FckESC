@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="FckESC.View.LoginingView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    mc:Ignorable="d"
+    d:DesignHeight="250"
+    d:DesignWidth="400">
+    <materialDesign:ColorZone
+        Mode="PrimaryLight"
+        VerticalAlignment="Stretch"
+        HorizontalAlignment="Stretch" 
+        VerticalContentAlignment="Center">
+        <StackPanel>
+            <ProgressBar
+                x:Name="ProgressWaiting"
+                Width="32"
+                Height="32"
+                Foreground="{DynamicResource MaterialDesignDarkForeground}"
+                Style="{StaticResource MaterialDesignCircularProgressBar}"
+                Value="0"
+                IsIndeterminate="True" />
+            <TextBlock
+                Margin="0 16 0 0"
+                HorizontalAlignment="Center"
+                Text="正在登录"
+                Foreground="{DynamicResource MaterialDesignDarkForeground}" />
+        </StackPanel>
+
+    </materialDesign:ColorZone>
+</UserControl>

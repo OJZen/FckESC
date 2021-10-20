@@ -1,0 +1,110 @@
+﻿<Window x:Class="FckESC.Windows.SettingWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontSize="16"
+    ResizeMode="CanMinimize"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    Background="{DynamicResource MaterialDesignPaper}"
+    TextElement.FontWeight="Medium"
+    Title="设置"
+    Height="250"
+    Width="400" WindowStartupLocation="CenterScreen">
+    <materialDesign:Card
+        Padding="0"
+        Margin="8">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="1*" />
+                <RowDefinition
+                    Height="2*" />
+                <RowDefinition
+                    Height="2*" />
+                <RowDefinition
+                    Height="2*" />
+                <RowDefinition
+                    Height="1*" />
+                <RowDefinition
+                    Height="2*" />
+                <RowDefinition
+                    Height="1*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width="1*" />
+                <ColumnDefinition
+                    Width="3*" />
+                <ColumnDefinition
+                    Width="1*" />
+                <ColumnDefinition
+                    Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock
+                Grid.Row="1"
+                Grid.Column="1"
+                VerticalAlignment="Center"
+                Text="自动保存账号和密码" />
+            <ToggleButton 
+                x:Name="Toggle_AutoSave"
+                Grid.Row="1"
+                Grid.Column="2"
+                Style="{StaticResource MaterialDesignSwitchToggleButton}"
+                ToolTip="账号会保存到本地"
+                IsChecked="True" />
+
+            <TextBlock
+                Grid.Row="2"
+                Grid.Column="1"
+                VerticalAlignment="Center"
+                Text="开机自启" />
+            <ToggleButton
+                x:Name="Toggle_Boot"
+                Grid.Row="2"
+                Grid.Column="2"
+                Style="{StaticResource MaterialDesignSwitchToggleButton}"
+                ToolTip="开机启动后自动认证"
+                IsChecked="False" />
+
+            <TextBlock
+                Grid.Row="3"
+                Grid.Column="1"
+                VerticalAlignment="Center"
+                Text="主题颜色" />
+            <Button
+                Grid.Row="3"
+                Grid.Column="2"
+                Width="24"
+                Height="24"
+                Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
+                ToolTip="未开放">
+            </Button>
+
+            <Button
+                x:Name="Button_SaveSetting"
+                Grid.Row="5"
+                Grid.Column="1"
+                HorizontalAlignment="Right"
+                Style="{StaticResource MaterialDesignFlatButton}"
+                ToolTip="保存设置"
+                Content="保存" 
+                Click="Button_SaveSetting_Click"
+                />
+
+            <Button
+                x:Name="Button_Cancel"
+                Grid.Row="5"
+                Grid.Column="2"
+                HorizontalAlignment="Right"
+                Style="{StaticResource MaterialDesignFlatButton}"
+                ToolTip="取消保存"
+                Content="取消"
+                Click="Button_Cancel_Click"
+                />
+        </Grid>
+    </materialDesign:Card>
+</Window>
