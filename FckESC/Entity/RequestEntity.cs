@@ -9,6 +9,8 @@ namespace FckESC.Entity
 {
     abstract class RequestEntity
     {
+        [JsonProperty("version")]
+        public string Version { get; set; }
         [JsonProperty("username")]
         public string Username { get; set; }
         [JsonProperty("clientip")]
