@@ -15,6 +15,7 @@ namespace FckESC.Entity
     {
         public ChallengeReq(string username)
         {
+            Version = "214";
             Username = username;
             Clientip = NetworkUtil.GetIP();
             Nasip = NetworkUtil.GetNasip();
@@ -25,7 +26,7 @@ namespace FckESC.Entity
 
         private void Initial()
         {
-            string enStr = Clientip + Nasip + Mac + Timestamp + KEY;
+            string enStr = Version + Clientip + Nasip + Mac + Timestamp + KEY;
             Console.WriteLine(enStr);
             string md5 = MD5Util.CreateMD5(enStr);
             Authenticator = md5;
@@ -38,7 +39,7 @@ namespace FckESC.Entity
 
         public override string GetRequestUrl()
         {
-            return "http://enet.10000.gd.cn:10001/client/challenge";
+            return "http://enet.10000.gd.cn:10001/client/vchallenge";
         }
 
     }
