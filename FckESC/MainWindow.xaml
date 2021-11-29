@@ -85,7 +85,7 @@
                             Foreground="{DynamicResource PrimaryHueMidBrush}"
                             Kind="HandHeart" />
                         <TextBlock
-                            Text="捐助"
+                            Text="打赏"
                             VerticalAlignment="Center" />
                     </StackPanel>
                 </Button>

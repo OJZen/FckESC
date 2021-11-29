@@ -13,7 +13,6 @@ namespace FckESC
     /// </summary>
     class LoginIntranet
     {
-
         /// <summary>
         /// 内网认证过程
         /// </summary>

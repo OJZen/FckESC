@@ -33,8 +33,8 @@
                             </StackPanel>
                         </DataTemplate>
                     </GroupBox.HeaderTemplate>
-                    <TextBlock Text="此程序用于五邑大学校园网登录，理论上也支持其他使用天翼校园的学校，具体需要自行测试。"
-                               TextWrapping="Wrap" />
+                    <TextBlock Text="天邑登录是一款简洁、快速、免费的第三方的五邑大学校园网登录程序。"
+                               TextWrapping="Wrap" Margin="8"/>
                 </GroupBox>
                 <GroupBox Header="使用方法"
                           Style="{DynamicResource MaterialDesignCardGroupBox}"
@@ -54,7 +54,7 @@
                         </DataTemplate>
                     </GroupBox.HeaderTemplate>
                     <TextBlock Text="输入账号和密码（以五邑大学为例，账号为学号，密码默认为身份证后8位），点击登录即可。登录成功后可以关闭程序。"
-                               TextWrapping="Wrap" />
+                               TextWrapping="Wrap" Margin="8"/>
                 </GroupBox>
                 <GroupBox Header="声明"
                           Style="{DynamicResource MaterialDesignCardGroupBox}"
@@ -73,8 +73,31 @@
                             </StackPanel>
                         </DataTemplate>
                     </GroupBox.HeaderTemplate>
-                    <TextBlock Text="本程序不会收集任何用户相关的隐私数据，有能力的同学可以自行抓包或者逆向本程序，保证不包含任何恶意代码。"
-                               TextWrapping="Wrap" />
+                    <StackPanel Orientation="Vertical" Margin="8">
+                        <TextBlock Text="请勿利用本程序进行任何违法、犯罪或不道德的行为！
+                                   本程序不会收集任何用户相关的隐私数据，有能力的同学可以自行查看源码，此项目已在Github和Gitee上开源。"
+                               TextWrapping="Wrap"/>
+                        
+                        <Button x:Name="Button_Github"
+                                Click="Button_Github_Click"
+                                Margin="0 16 0 16">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Github"
+                                                         Margin="0,0,8,0" />
+                                <TextBlock Text="Github：https://github.com/OJZen/FckESC" />
+                            </StackPanel>
+                        </Button>
+
+                        <Button x:Name="Button_Gitee"
+                                Click="Button_Gitee_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="GitRepository"
+                                                         Margin="0,0,8,0" />
+                                <TextBlock Text="Gitee：https://gitee.com/ojun/FckESC" />
+                            </StackPanel>
+                        </Button>
+
+                    </StackPanel>
                 </GroupBox>
                 <GroupBox Header="联系"
                           Style="{DynamicResource MaterialDesignCardGroupBox}"
@@ -93,7 +116,7 @@
                             </StackPanel>
                         </DataTemplate>
                     </GroupBox.HeaderTemplate>
-                    <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal" Margin="8">
                         <Button x:Name="Button_QQ"
                                 Click="Button_QQ_Click"
                                 Margin="8">

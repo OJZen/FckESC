@@ -104,6 +104,11 @@ namespace FckESC.View
 
         */
 
+        /// <summary>
+        /// 登录按钮的事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void Button_Login_Click(object sender, RoutedEventArgs e)
         {
             MoveNext();
@@ -171,11 +176,17 @@ namespace FckESC.View
             Console.WriteLine("登录完成");
         }
 
+        /// <summary>
+        /// 移动到下一个页面
+        /// </summary>
         private void MoveNext()
         {
             Transitioner.MoveNextCommand.Execute(Button_Login, Button_Login);
         }
 
+        /// <summary>
+        /// 返回上一个页面
+        /// </summary>
         private void MovePrevious()
         {
             Transitioner.MovePreviousCommand.Execute(Button_Login, Button_Login);

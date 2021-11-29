@@ -35,5 +35,15 @@ namespace FckESC.Windows
             Clipboard.SetText("admin@jzen.tech");
             SnackbarTips.MessageQueue.Enqueue("已复制");
         }
+
+        private void Button_Github_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/OJZen/FckESC");
+        }
+
+        private void Button_Gitee_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://gitee.com/ojun/FckESC");
+        }
     }
 }
