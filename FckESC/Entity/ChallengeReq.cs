@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace FckESC.Entity
 {
     /// <summary>
-    /// 验证码请求的实体，调用GetJson进行请求
+    /// 验证码请求的实体
     /// </summary>
     class ChallengeReq : RequestEntity
     {

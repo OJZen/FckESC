@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace FckESC.Entity
 {
+    /// <summary>
+    /// 请求实体
+    /// </summary>
     abstract class RequestEntity
     {
         [JsonProperty("version")]

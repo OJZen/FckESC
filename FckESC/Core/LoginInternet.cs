@@ -34,10 +34,10 @@ namespace FckESC
                     //{ "challenge":"9XTR","rescode":"0","resinfo":"this user is ok!"}
                     var result = response.Content.ReadAsStringAsync().Result;
                     Console.WriteLine(result);
-                    JObject o = JObject.Parse(result);
-                    if (o.SelectToken("rescode").ToString() == "0")
+                    JObject resultJson = JObject.Parse(result);
+                    if (resultJson.SelectToken("rescode").ToString() == "0")
                     {
-                        return o.SelectToken("challenge").ToString();
+                        return resultJson.SelectToken("challenge").ToString();
                     }
                     return "";
                 }
@@ -71,8 +71,8 @@ namespace FckESC
                     var result = response.Content.ReadAsStringAsync().Result;
                     Console.WriteLine(result);
 
-                    JObject o = JObject.Parse(result);
-                    switch (o.SelectToken("rescode").ToString())
+                    JObject resultJson = JObject.Parse(result);
+                    switch (resultJson.SelectToken("rescode").ToString())
                     {
                         case "0":
                             return LoginResult.Type.Ok;

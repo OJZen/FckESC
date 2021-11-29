@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace FckESC.Entity
 {
+    /// <summary>
+    /// 心跳包请求实体
+    /// </summary>
     class ActiveReq : RequestEntity
     {
         public ActiveReq(string username)

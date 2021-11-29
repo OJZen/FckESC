@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace FckESC.Entity
 {
+    /// <summary>
+    /// 登录请求对象
+    /// </summary>
     class LoginReq : RequestEntity
     {
         private string challenge;

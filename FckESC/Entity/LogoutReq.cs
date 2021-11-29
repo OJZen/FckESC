@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace FckESC.Entity
 {
+    /// <summary>
+    /// 注销请求对象
+    /// </summary>
     class LogoutReq : RequestEntity
     {
         public LogoutReq(string username)

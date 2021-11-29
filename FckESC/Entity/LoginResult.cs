@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace FckESC.Entity
 {
+    /// <summary>
+    /// 登录返回结果
+    /// </summary>
     class LoginResult
     {
         public LoginResult(Type type)

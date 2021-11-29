@@ -65,7 +65,14 @@
             Grid.Column="1"
             VerticalAlignment="Center"
             materialDesign:HintAssist.Hint="密码"
-            Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
+            Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" >
+            <PasswordBox.CommandBindings>
+                <CommandBinding Command="NavigationCommands.BrowseForward" Executed="Button_Login_Click"/>
+            </PasswordBox.CommandBindings>
+            <PasswordBox.InputBindings>
+                <KeyBinding Command="NavigationCommands.BrowseForward" Gesture="Enter" />
+            </PasswordBox.InputBindings>
+        </PasswordBox>
 
         <Button
             x:Name="Button_Login"
