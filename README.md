@@ -22,6 +22,8 @@ IDE： Visual Studio 2022
 
 本项目的接口参考自[6DDUU6/SchoolAuthentication](https://github.com/6DDUU6/SchoolAuthentication)
 
+UI采用开源框架[MaterialDesignInXAML/MaterialDesignInXamlToolkit](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit)
+
 ## 联系
 
 admin@jzen.tech

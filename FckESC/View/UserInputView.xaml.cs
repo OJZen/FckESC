@@ -1,6 +1,7 @@
 ﻿using FckESC.Entity;
 using FckESC.Util;
 using FckESC.ViewModel;
+using MaterialDesignThemes.Wpf;
 using MaterialDesignThemes.Wpf.Transitions;
 using System;
 using System.Net.Http;
@@ -111,15 +112,14 @@ namespace FckESC.View
         /// <param name="e"></param>
         private async void Button_Login_Click(object sender, RoutedEventArgs e)
         {
-            MoveNext();
-            //http://enet.10000.gd.cn:10001/qs/main.jsp?wlanacip=119.146.175.80&wlanuserip=100.2.43.63
-
             if (string.IsNullOrEmpty(Text_Account.Text) || string.IsNullOrEmpty(Text_Password.Password))
             {
                 MessageBox.Show("账号或者密码不能为空！", "提示：", MessageBoxButton.OK, MessageBoxImage.Information);
-                MovePrevious();
                 return;
             }
+
+            MoveNext();
+            //http://enet.10000.gd.cn:10001/qs/main.jsp?wlanacip=119.146.175.80&wlanuserip=100.2.43.63
 
             try
             {
