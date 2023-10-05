@@ -19,14 +19,14 @@ javax.faces.ViewState: N8QBoU0SYLMEO+J0+0V4WpquoRG+Cg9rDflycI7/6S5H9PnJi51MrnySv
 
 N8QBoU0SYLMEO%2BJ0%2B0V4WpquoRG%2BCg9rDflycI7%2F6S5OmdqsPyrlwDTzgp834LDpOP6v%2FBr0DZjEK3JJ4cK3QMKaiLNL%2FK6vFOhgGx%2BspSOsElJt
 
-无cookie状态，打开http://172.17.18.2:8080/byod/index.xhtml，
+无cookie状态，打开http://172.17.18.2:9092/byod/index.xhtml，
 
 找到action="/byod/index.xhtml;jsessionid=7E3F85BF2279D91EBF7E01C7AD088238"，
 
 并找到参数javax.faces.ViewState=N8QBoU0SYLMEO%2BJ0%2B0V4WpquoRG%2BCg9rDflycI7%2F6S5OmdqsPyrlwDTzgp834LDpOP6v%2FBr0DZjEK3JJ4cK3QMKaiLNL%2FK6vFOhgGx%2BspSOsElJt
 （等号后面要进行url编码）
 
-对http://172.17.18.2:8080/byod/index.xhtml;jsessionid=7E3F85BF2279D91EBF7E01C7AD088238进行post请求
+对http://172.17.18.2:9092/byod/index.xhtml;jsessionid=7E3F85BF2279D91EBF7E01C7AD088238进行post请求
 参数为
 wlannasid=&usermac=&userurl=&userip=&ssid=&btn=&j_id_3_SUBMIT=1&javax.faces.ViewState=N8QBoU0SYLMEO%2BJ0%2B0V4WpquoRG%2BCg9rDflycI7%2F6S5OmdqsPyrlwDTzgp834LDpOP6v%2FBr0DZjEK3JJ4cK3QMKaiLNL%2FK6vFOhgGx%2BspSOsElJt
 
