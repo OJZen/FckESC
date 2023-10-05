@@ -91,7 +91,7 @@ namespace FckESC.Util
                 {
                     // 上面没拿到，就尝试用tcp连接，看看能不能成。
                     // 如果走到这里，八成是连接不上了。
-                    if (tcp.ConnectAsync(INTRANETIP, 8080).Wait(1500))
+                    if (tcp.ConnectAsync(INTRANETIP, 9092).Wait(1500))
                     {
                         string ip = ((System.Net.IPEndPoint)tcp.Client.LocalEndPoint).Address.ToString();
                         Console.WriteLine(ip);

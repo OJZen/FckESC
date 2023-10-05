@@ -29,7 +29,7 @@ namespace FckESC
                 httpClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("*/*"));
                 httpClient.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 Edg/87.0.664.66");
 
-                var httpResponse = await httpClient.GetAsync("http://172.17.18.2:8080/byod/index.xhtml");
+                var httpResponse = await httpClient.GetAsync("http://172.17.18.2:9092/byod/index.xhtml");
 
                 if (httpResponse.IsSuccessStatusCode)
                 {
@@ -61,7 +61,7 @@ namespace FckESC
                 var content = new StringContent(data);
                 content.Headers.ContentType.MediaType = "application/x-www-form-urlencoded";
 
-                httpResponse = await httpClient.PostAsync("http://172.17.18.2:8080/byod/index.xhtml", content);
+                httpResponse = await httpClient.PostAsync("http://172.17.18.2:9092/byod/index.xhtml", content);
                 
                 // 清空，后面用
                 var redirectUrl = "";
@@ -72,7 +72,7 @@ namespace FckESC
                     // 重定向的地址
                     redirectUrl = httpResponse.RequestMessage.RequestUri.ToString();
                     Console.WriteLine(redirectUrl);
-                    // "http://172.17.18.2:8080/byod/templatePage/20200318110733542/guestRegister.jsf"
+                    // "http://172.17.18.2:9092/byod/templatePage/20200318110733542/guestRegister.jsf"
                     httpResponse = await httpClient.GetAsync(redirectUrl);
 
                     if (httpResponse.IsSuccessStatusCode)
@@ -123,7 +123,7 @@ namespace FckESC
                         Regex regex = new Regex("(?<=url=\").+ (?= \")");
                         if (regex.IsMatch(html))
                         {
-                            redirectUrl = "http://172.17.18.2:8080" + regex.Match(html).Value;
+                            redirectUrl = "http://172.17.18.2:9092" + regex.Match(html).Value;
 
                             httpResponse = await httpClient.GetAsync(redirectUrl);
                             if (httpResponse.IsSuccessStatusCode)
